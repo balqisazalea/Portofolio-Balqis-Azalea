@@ -11,16 +11,16 @@ const Navbar = () => {
       className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 glass rounded-full px-6 py-3 flex items-center justify-between"
     >
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-accent-primary to-primary-text flex items-center justify-center text-white font-serif font-bold text-sm">
-          S
+        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-accent-primary to-accent-secondary flex items-center justify-center text-white shadow-sm font-serif font-bold text-sm">
+          B
         </div>
-        <span className="font-serif font-bold text-primary-text tracking-tight">Studio.</span>
+        <span className="font-serif font-bold text-primary-text tracking-tight">Balqis</span>
       </div>
       
       <div className="hidden md:flex items-center gap-8 font-medium text-sm text-primary-text/70">
         <a href="#about" className="hover:text-primary-text transition-colors">About</a>
-        <a href="#work" className="hover:text-primary-text transition-colors">Project</a>
-        <a href="#services" className="hover:text-primary-text transition-colors">Services</a>
+        <a href="#work" className="hover:text-primary-text transition-colors">PORTFOLIO</a>
+        <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
       </div>
 
       <button className="bg-primary-text text-base px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-text/90 transition-all hover:shadow-lg hover:shadow-primary-text/10 active:scale-95 flex items-center gap-2">
@@ -33,16 +33,8 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
-      {/* Background Decorative Elements specific to Hero */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-ivory/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-accent-primary/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-accent-secondary/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-84 h-84 bg-lavender/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-3000"></div>
-      </div>
-
       {/* Hero-specific Noise Texture */}
-      <div className="absolute inset-0 pointer-events-none bg-noise opacity-[0.03] z-0"></div>
+      <div className="absolute inset-0 pointer-events-none bg-noise opacity-[0.05] z-0"></div>
 
       <div className="w-full flex flex-col items-center justify-center relative z-10 gap-16">
         
@@ -58,7 +50,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6 px-5 py-2 rounded-full border border-white/20 bg-white/40 backdrop-blur-xl shadow-[0_8px_32_rgba(0,0,0,0.04)] text-sm font-semibold text-primary-text inline-flex items-center gap-3 cursor-default"
+            className="mb-6 px-5 py-2 rounded-full border border-white/40 bg-white/30 backdrop-blur-2xl saturate-[180%] shadow-[0_8px_32_rgba(0,0,0,0.04)] text-sm font-semibold text-primary-text inline-flex items-center gap-3 cursor-default"
           >
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-primary opacity-75"></span>
@@ -71,14 +63,14 @@ const Hero = () => {
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight text-primary-text leading-[1.1] mb-6 drop-shadow-sm">
             Hi, I'm Balqis.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-primary-text">
-              Turning imagination into visual reality.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-primary-text text-[12vw] leading-[0.8] block w-full text-center">
+              PORTFOLIO
             </span>
           </h1>
 
           {/* Sub-headline */}
           <p className="text-lg sm:text-xl text-primary-text/70 leading-relaxed max-w-2xl mb-10 font-sans mx-auto">
-            Translating abstract ideas into vibrant illustrations and strategic graphic designs. Helping brands find their unique visual voice.
+            Illustrator & Graphic Design
           </p>
 
           {/* CTA Button */}
@@ -216,8 +208,6 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="md:col-span-7 lg:col-span-8 glass-card rounded-[40px] p-8 md:p-10 flex flex-col justify-center relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-secondary/10 rounded-full mix-blend-multiply filter blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            
             <h3 className="text-2xl font-serif font-bold text-primary-text mb-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-accent-primary/10 flex items-center justify-center text-accent-primary">
                 <User className="w-5 h-5" />
@@ -246,8 +236,6 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="glass-card rounded-[40px] p-8 md:p-10 relative overflow-hidden"
             >
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-accent-secondary/10 rounded-full mix-blend-multiply filter blur-2xl translate-y-1/2 translate-x-1/4"></div>
-              
               <h3 className="text-2xl font-serif font-bold text-primary-text mb-8 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-accent-primary/10 flex items-center justify-center text-accent-primary">
                   <GraduationCap className="w-5 h-5" />
@@ -280,8 +268,6 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="glass-card rounded-[40px] p-8 md:p-10 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-40 h-40 bg-accent-primary/10 rounded-full mix-blend-multiply filter blur-2xl -translate-y-1/4 -translate-x-1/4"></div>
-              
               <h3 className="text-2xl font-serif font-bold text-primary-text mb-8 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-accent-primary/10 flex items-center justify-center text-accent-primary">
                   <Sparkles className="w-5 h-5" />
@@ -291,13 +277,13 @@ const About = () => {
               
               <div className="flex flex-wrap justify-center gap-x-4 gap-y-8 relative z-10 mt-6">
                 {[
-                  { name: 'Clip Studio', logo: 'https://github.com/user-attachments/assets/9cfde58c-2c77-4626-99fb-afa409afbd53', bg: 'bg-accent-secondary/10', rotate: '-rotate-6', delay: 0 },
-                  { name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', bg: 'bg-white', rotate: 'rotate-3', delay: 0.2 },
-                  { name: 'Illustrator', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg', bg: 'bg-accent-secondary/10', rotate: '-rotate-3', delay: 0.4 },
-                  { name: 'Photoshop', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg', bg: 'bg-accent-primary/10', rotate: 'rotate-6', delay: 0.1 },
-                  { name: 'Ibis Paint', logo: 'https://github.com/user-attachments/assets/0167e30d-2206-4446-842c-d0393aea0bee', bg: 'bg-white', rotate: '-rotate-12', delay: 0.5 },
-                  { name: 'Cap Cut', logo: 'https://github.com/user-attachments/assets/50c87e3e-2a8a-470d-8cfb-c8b98a6b277b', bg: 'bg-white', rotate: 'rotate-12', delay: 0.3 },
-                  { name: 'Canva', logo: 'https://github.com/user-attachments/assets/f7cf267a-c0e6-4565-b67c-b5de8ac7501d', bg: 'bg-accent-primary/10', rotate: '-rotate-3', delay: 0.6 }
+                  { name: 'Clip Studio', logo: 'https://github.com/user-attachments/assets/9cfde58c-2c77-4626-99fb-afa409afbd53', bg: 'glass', rotate: '-rotate-6', delay: 0 },
+                  { name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', bg: 'glass', rotate: 'rotate-3', delay: 0.2 },
+                  { name: 'Illustrator', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg', bg: 'glass', rotate: '-rotate-3', delay: 0.4 },
+                  { name: 'Photoshop', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg', bg: 'glass', rotate: 'rotate-6', delay: 0.1 },
+                  { name: 'Ibis Paint', logo: 'https://github.com/user-attachments/assets/0167e30d-2206-4446-842c-d0393aea0bee', bg: 'glass', rotate: '-rotate-12', delay: 0.5 },
+                  { name: 'Cap Cut', logo: 'https://github.com/user-attachments/assets/50c87e3e-2a8a-470d-8cfb-c8b98a6b277b', bg: 'glass', rotate: 'rotate-12', delay: 0.3 },
+                  { name: 'Canva', logo: 'https://github.com/user-attachments/assets/f7cf267a-c0e6-4565-b67c-b5de8ac7501d', bg: 'glass', rotate: '-rotate-3', delay: 0.6 }
                 ].map((skill, i) => (
                   <motion.div 
                     key={skill.name} 
@@ -306,10 +292,10 @@ const About = () => {
                     whileHover={{ scale: 1.1, zIndex: 20 }}
                     className={`flex flex-col items-center justify-center gap-2 cursor-default ${skill.rotate}`}
                   >
-                    <div className="w-16 h-16 flex items-center justify-center">
+                    <div className={`w-16 h-16 flex items-center justify-center rounded-2xl glass p-3 shadow-lg border border-white/40 saturate-[150%]`}>
                       <img src={skill.logo} alt={skill.name} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                     </div>
-                    <span className="text-[11px] font-bold text-primary-text bg-white/10 px-3 py-1 rounded-full shadow-sm border border-white/10 backdrop-blur-md whitespace-nowrap">{skill.name}</span>
+                    <span className="text-[11px] font-bold text-primary-text glass px-3 py-1 rounded-full shadow-sm border border-white/20 whitespace-nowrap">{skill.name}</span>
                   </motion.div>
                 ))}
               </div>
@@ -325,33 +311,33 @@ const BentoGallery = () => {
   const projects = [
     {
       id: 1,
-      title: "Oatmilk Rebrand",
-      category: "Brand Identity",
+      title: "Cover Buku Keong Mas",
+      category: "Illustration",
       description: "Identitas visual yang segar dan menyenangkan serta desain kemasan untuk merek susu oat modern.",
-      image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&q=80&w=800",
+      image: "https://github.com/user-attachments/assets/3377698d-9bc5-4eac-8120-d1d8a1305b79",
       colSpan: "md:col-span-2",
       rowSpan: "md:row-span-2",
       color: "bg-blue-100"
     },
     {
-      id: 2,
-      title: "Summer Festival",
-      category: "Illustration",
-      description: "Ilustrasi poster yang cerah dan penuh energi untuk festival musik musim panas tahunan.",
-      image: "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&q=80&w=800",
-      colSpan: "md:col-span-1",
-      rowSpan: "md:row-span-1",
-      color: "bg-blue-100"
-    },
-    {
       id: 3,
-      title: "Eco Skincare",
-      category: "Packaging",
+      title: "DEGAMON",
+      category: "Illustration",
       description: "Desain kemasan yang berkelanjutan dan minimalis untuk lini perawatan kulit organik.",
-      image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=800",
+      image: "https://github.com/user-attachments/assets/4e8f91cf-8bcc-42ad-b98f-a13f5e25a6b0",
       colSpan: "md:col-span-1",
       rowSpan: "md:row-span-1",
       color: "bg-green-100"
+    },
+    {
+      id: 2,
+      title: "Ilustrasi Kaos",
+      category: "Illustration",
+      description: "Ilustrasi poster yang cerah dan penuh energi untuk festival musik musim panas tahunan.",
+      image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
+      colSpan: "md:col-span-1",
+      rowSpan: "md:row-span-1",
+      color: "bg-blue-100"
     },
     {
       id: 4,
@@ -369,7 +355,7 @@ const BentoGallery = () => {
     <section id="work" className="py-24 px-6 max-w-7xl mx-auto relative z-10">
       <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <h2 className="text-4xl font-serif font-bold text-primary-text mb-4">Selected Works</h2>
+          <h2 className="text-4xl font-serif font-bold text-primary-text mb-4">My Project</h2>
           <p className="text-primary-text/70 max-w-md">A collection of my recent projects focusing on playful branding and vibrant illustrations.</p>
         </div>
         <button className="px-6 py-3 glass-card rounded-full font-medium text-primary-text hover:bg-white/80 transition-all flex items-center gap-2 w-fit">
@@ -416,7 +402,7 @@ const BentoGallery = () => {
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
-  const email = "hello@studio.com";
+  const email = "balqiseka10@gmail.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -425,15 +411,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12 px-6 relative z-10 mt-20">
-      <div className="max-w-4xl mx-auto glass-card rounded-[40px] p-8 md:p-12 flex flex-col items-center text-center">
+    <footer id="contact" className="py-12 px-6 relative z-10 mt-20">
+      <div className="max-w-4xl mx-auto glass-card !bg-accent-primary/10 rounded-[40px] p-8 md:p-12 flex flex-col items-center text-center border-accent-primary/20">
         <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-text mb-6">
           Ready to create something <span className="text-gradient">cheerful?</span>
         </h2>
         
         <button 
           onClick={handleCopy}
-          className="group relative flex items-center gap-3 px-8 py-4 bg-white/40 rounded-full shadow-sm border border-white/20 hover:shadow-md transition-all mb-12 backdrop-blur-md"
+          className="group relative flex items-center gap-3 px-8 py-4 bg-white/30 rounded-full shadow-sm border border-white/40 hover:shadow-md transition-all mb-12 backdrop-blur-2xl saturate-[180%]"
         >
           <Mail className="w-5 h-5 text-primary-text/40 group-hover:text-accent-primary transition-colors" />
           <span className="text-lg font-medium text-primary-text/80">{email}</span>
@@ -446,10 +432,10 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-accent-primary to-primary-text flex items-center justify-center text-white font-serif font-bold text-[10px]">
-              S
+            <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-accent-primary to-accent-secondary flex items-center justify-center text-white shadow-sm font-serif font-bold text-[10px]">
+              B
             </div>
-            <span className="font-serif font-bold text-primary-text text-sm">Studio.</span>
+            <span className="font-serif font-bold text-primary-text text-sm">Balqis</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -465,7 +451,7 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-primary-text/50">
-            © {new Date().getFullYear()} Studio. All rights reserved.
+            © {new Date().getFullYear()} Balqis. All rights reserved.
           </p>
         </div>
       </div>
