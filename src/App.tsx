@@ -314,7 +314,7 @@ const ProjectsSection = () => {
       title: "Cover Buku Keong Mas",
       category: "Illustration",
       description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual, sebagai simbol inti cerita dan daya tarik utama komposisi.",
-      image: "https://github.com/user-attachments/assets/81bda177-41c6-4f18-a630-f96cac8542f1",
+      image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
     },
     {
       id: 2,
@@ -392,7 +392,7 @@ const ProjectsSection = () => {
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 ${project.id === 1 ? 'scale-105' : ''}`}
                     referrerPolicy="no-referrer"
                   />
                 )}
