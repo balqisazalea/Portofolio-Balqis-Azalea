@@ -19,7 +19,7 @@ const Navbar = () => {
       
       <div className="hidden md:flex items-center gap-8 font-medium text-sm text-primary-text/70">
         <a href="#about" className="hover:text-primary-text transition-colors">About</a>
-        <a href="#work" className="hover:text-primary-text transition-colors">PORTFOLIO</a>
+        <a href="#work" className="hover:text-primary-text transition-colors">Project</a>
         <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
       </div>
 
@@ -332,17 +332,18 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "Tech Startup",
-      category: "UI/UX & Brand",
-      description: "Identitas merek yang komprehensif dan desain antarmuka pengguna untuk startup teknologi yang inovatif.",
-      image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800",
+      title: "Rebranding Tepiranu Coffee",
+      category: "Rebranding",
+      description: "Proyek berbasis tim berupa perancangan rebranding untuk sebuah public space bernama Tepiranu Coffee. Perancangan meliputi pengembangan logo, Graphic Standard Manual (GSM), identitas visual, desain signage, serta media promosi digital untuk membangun identitas yang konsisten dan mudah dikenali.",
+      image: "https://github.com/user-attachments/assets/1371b1d4-feee-4280-b66c-ef3ba11bf528",
     }
   ];
 
   return (
     <section id="work" className="py-24 px-6 max-w-7xl mx-auto relative z-10">
       <div className="mb-20">
-        <h2 className="text-5xl font-serif font-bold text-primary-text mb-4">My Project</h2>
+        <h2 className="text-5xl font-serif font-bold text-primary-text mb-4">Project</h2>
+        <p className="text-primary-text/70 max-w-md">beberapa proyek terbaik saya</p>
       </div>
 
       <div className="flex flex-col gap-24">
@@ -392,7 +393,7 @@ const ProjectsSection = () => {
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 ${project.id === 1 ? 'scale-105' : ''}`}
+                    className={`w-full ${project.id === 4 ? 'md:w-3/4 mx-auto' : ''} h-auto object-cover transition-transform duration-700 group-hover:scale-110 ${project.id === 1 ? 'scale-105' : ''}`}
                     referrerPolicy="no-referrer"
                   />
                 )}
