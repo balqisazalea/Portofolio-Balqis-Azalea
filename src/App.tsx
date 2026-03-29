@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Copy, Check, Dribbble, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush } from 'lucide-react';
+import { ArrowRight, Copy, Check, Dribbble, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ selectedProject }: { selectedProject: any }) => {
+  if (selectedProject) return null;
   return (
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
@@ -162,7 +163,7 @@ const About = () => {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <h2 className="text-5xl md:text-7xl font-serif font-extrabold text-primary-text mb-4 tracking-tight">
+        <h2 className="text-4xl md:text-6xl font-serif font-extrabold text-primary-text mb-4 tracking-tight">
           Balqis Eka Tri Azalea
         </h2>
         <div className="h-1 w-24 bg-gradient-to-r from-accent-primary to-primary-text rounded-full mb-6"></div>
@@ -307,7 +308,7 @@ const About = () => {
   );
 };
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProject: any, setSelectedProject: (project: any) => void }) => {
   const projects = [
     {
       id: 1,
@@ -315,6 +316,13 @@ const ProjectsSection = () => {
       category: "Illustration",
       description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual, sebagai simbol inti cerita dan daya tarik utama komposisi.",
       image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
+      images: [
+        "https://github.com/user-attachments/assets/8a9e7a14-dd54-4aa8-9d2a-3735b2dda44b",
+        "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
+        "https://github.com/user-attachments/assets/0a4bbce9-65f4-4708-964b-1ca16a61f593",
+        "https://github.com/user-attachments/assets/31cf93db-7cdd-41d5-8ee2-5a81e87fb515"
+      ],
+      tools: ["Clip Studio Paint"]
     },
     {
       id: 2,
@@ -322,6 +330,13 @@ const ProjectsSection = () => {
       category: "Illustration",
       description: "Desain ilustrasi kaos dengan karakter Kucing yang dikembangkan melalui pendekatan stylized. Karakter dirancang dengan kepribadian aktif, girly, dan ceria, yang ditampilkan melalui ekspresi wajah, gesture, serta pemilihan warna yang kontras untuk memperkuat daya tarik visual pada media apparel.",
       image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
+      images: [
+        "https://github.com/user-attachments/assets/f6a5e894-4723-4a64-8172-36d40d1b1d3d",
+        "https://github.com/user-attachments/assets/5b7b4e77-c693-4a41-90f0-22c056f929ae",
+        "https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb",
+        "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61"
+      ],
+      tools: ["Clip Studio Paint", "Photoshop"]
     },
     {
       id: 3,
@@ -329,96 +344,123 @@ const ProjectsSection = () => {
       category: "Illustration",
       description: "Im adalah karakter monster berbasis Meerkat dengan pendekatan stylized, menggabungkan warna hijau dan elemen lightning sebagai representasi energi dan kewaspadaan. Desain ini menekankan karakter yang lincah, responsif, serta memiliki kekuatan listrik sebagai identitas visual utamanya.",
       image: "https://github.com/user-attachments/assets/4e8f91cf-8bcc-42ad-b98f-a13f5e25a6b0",
+      images: [
+        "https://github.com/user-attachments/assets/cf016c4d-46fa-4423-b6e7-d388acbc3305",
+        "https://github.com/user-attachments/assets/9ea2fbb1-7ba7-4f1a-be25-0e4fe1b1cf25",
+        "https://github.com/user-attachments/assets/50138b3a-bc75-477c-9362-042d48edc7e6",
+        "https://github.com/user-attachments/assets/60616591-9fe1-41a9-a2e3-d260aaed3dde",
+        "https://github.com/user-attachments/assets/0b6bbbf0-e6f9-407a-aa0c-22cc32dcf7f7",
+        "https://github.com/user-attachments/assets/9964faaf-dd02-44cc-8d42-1e4fb77a90bd",
+        "https://github.com/user-attachments/assets/93c594f9-ec30-4611-abed-bc7b764f834d",
+        "https://github.com/user-attachments/assets/b74c5ea8-e478-485a-93bc-6f598f2c72d3",
+        "https://github.com/user-attachments/assets/bf6be5a8-1a3f-4c79-8701-9ecc9accc409"
+      ],
+      tools: ["Ibis Paint", "Adobe Illustrator"]
     },
     {
       id: 4,
       title: "Rebranding Tepiranu Coffee",
       category: "Rebranding",
       description: "Proyek berbasis tim berupa perancangan rebranding untuk sebuah public space bernama Tepiranu Coffee. Perancangan meliputi pengembangan logo, Graphic Standard Manual (GSM), identitas visual, desain signage, serta media promosi digital untuk membangun identitas yang konsisten dan mudah dikenali.",
-      image: "https://github.com/user-attachments/assets/1371b1d4-feee-4280-b66c-ef3ba11bf528",
+      image: "https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8",
+      images: ["https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8"],
+      tools: ["Illustrator", "Photoshop"]
     }
   ];
 
   return (
     <section id="work" className="py-24 px-6 max-w-7xl mx-auto relative z-10">
-      <div className="mb-20">
-        <h2 className="text-5xl font-serif font-bold text-primary-text mb-4">Project</h2>
-        <p className="text-primary-text/70 max-w-md">beberapa proyek terbaik saya</p>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="mb-20">
+          <h2 className="text-6xl font-serif font-bold text-primary-text mb-4">Project</h2>
+          <p className="text-primary-text/70 max-w-md">beberapa proyek terbaik saya</p>
+        </div>
 
-      <div className="flex flex-col gap-24">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
-          >
-            {/* Left Column: Image (60%) */}
-            <div className={`md:col-span-7 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-              <div className="relative group rounded-[24px] overflow-hidden">
-                {project.id === 2 ? (
-                  <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-24">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+            >
+              {/* Left Column: Image (60%) */}
+              <div className={`md:col-span-7 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="relative group rounded-[24px] overflow-hidden">
+                  {project.id === 2 ? (
+                    <div className="flex flex-col gap-4">
+                      <img 
+                        src="https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb" 
+                        alt={project.title} 
+                        className="w-3/4 h-auto object-cover rounded-[24px] mx-auto"
+                        referrerPolicy="no-referrer"
+                      />
+                      <img 
+                        src="https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61" 
+                        alt={project.title} 
+                        className="w-3/4 h-auto object-cover rounded-[24px] mx-auto"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ) : project.id === 3 ? (
+                    <div className="flex flex-col gap-4">
+                      <img 
+                        src="https://github.com/user-attachments/assets/2d90b728-6ecd-4ca5-ada6-0756e57a7c2a" 
+                        alt={project.title} 
+                        className="w-2/3 h-auto object-cover rounded-[24px] mx-auto"
+                        referrerPolicy="no-referrer"
+                      />
+                      <img 
+                        src="https://github.com/user-attachments/assets/a5fe12ef-0ea4-433a-bf39-c1dc5bc7679b" 
+                        alt={project.title} 
+                        className="w-2/3 h-auto object-cover rounded-[24px] mx-auto"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ) : (
                     <img 
-                      src="https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb" 
+                      src={project.image} 
                       alt={project.title} 
-                      className="w-3/4 h-auto object-cover rounded-[24px] mx-auto"
+                      className={`w-full ${project.id === 4 ? 'md:w-3/4 mx-auto' : ''} h-auto object-cover transition-transform duration-700 group-hover:scale-110 ${project.id === 1 ? 'scale-105' : ''}`}
                       referrerPolicy="no-referrer"
                     />
-                    <img 
-                      src="https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61" 
-                      alt={project.title} 
-                      className="w-3/4 h-auto object-cover rounded-[24px] mx-auto"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                ) : project.id === 3 ? (
-                  <div className="flex flex-col gap-4">
-                    <img 
-                      src="https://github.com/user-attachments/assets/2d90b728-6ecd-4ca5-ada6-0756e57a7c2a" 
-                      alt={project.title} 
-                      className="w-2/3 h-auto object-cover rounded-[24px] mx-auto"
-                      referrerPolicy="no-referrer"
-                    />
-                    <img 
-                      src="https://github.com/user-attachments/assets/a5fe12ef-0ea4-433a-bf39-c1dc5bc7679b" 
-                      alt={project.title} 
-                      className="w-2/3 h-auto object-cover rounded-[24px] mx-auto"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                ) : (
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className={`w-full ${project.id === 4 ? 'md:w-3/4 mx-auto' : ''} h-auto object-cover transition-transform duration-700 group-hover:scale-110 ${project.id === 1 ? 'scale-105' : ''}`}
-                    referrerPolicy="no-referrer"
-                  />
-                )}
-              </div>
-            </div>
-
-            {/* Right Column: Description (40%) */}
-            <div className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-              <div className="glass-card rounded-[24px] p-8 md:p-10 backdrop-blur-md bg-white/40 border border-white/20 shadow-xl">
-                <span className="text-xs font-bold uppercase tracking-wider text-accent-primary mb-3 block">{project.category}</span>
-                <h3 className="text-4xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
-                  {project.title}
-                </h3>
-                <p className="text-primary-text/80 leading-relaxed mb-8">{project.description}</p>
-                
-                {/* Tech/Tools Used */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Illustration</span>
-                  <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Design</span>
+                  )}
                 </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+
+              {/* Right Column: Description (40%) */}
+              <div className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <div className="glass-card rounded-[24px] p-8 md:p-10 backdrop-blur-md bg-white/40 border border-white/20 shadow-xl">
+                  <span className="text-xs font-bold uppercase tracking-wider text-accent-primary mb-3 block">{project.category}</span>
+                  <h3 className="text-4xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
+                    {project.title}
+                  </h3>
+                  <p className="text-primary-text/80 leading-relaxed mb-8">{project.description}</p>
+                  
+                  {/* Tech/Tools Used */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Illustration</span>
+                    <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Design</span>
+                  </div>
+
+                  <button 
+                    onClick={() => setSelectedProject(project)}
+                    className="px-6 py-2.5 bg-primary-text text-white rounded-full text-sm font-medium hover:bg-primary-text/90 transition-all shadow-lg shadow-primary-text/10 active:scale-95 flex items-center gap-2"
+                  >
+                    Detail <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };
@@ -486,18 +528,72 @@ const Footer = () => {
 };
 
 export default function App() {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   return (
     <div className="min-h-screen bg-base relative selection:bg-accent-primary/20 selection:text-primary-text overflow-x-hidden">
       {/* Noise Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none bg-noise z-0 opacity-60"></div>
       
-      <Navbar />
+      {!selectedProject && <Navbar selectedProject={selectedProject} />}
       <main>
         <Hero />
         <About />
-        <ProjectsSection />
+        <ProjectsSection selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
       </main>
       <Footer />
+
+      {selectedProject && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm" 
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="bg-white/70 backdrop-blur-2xl border border-white/40 rounded-[32px] p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative [&::-webkit-scrollbar]:hidden" 
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button 
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-6 right-6 p-2 rounded-full glass bg-white/50 hover:bg-white/80 transition-colors"
+            >
+              <X className="w-6 h-6 text-primary-text" />
+            </button>
+
+            {/* Header */}
+            <h2 className="text-5xl font-serif font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text mb-6">
+              {selectedProject.title}
+            </h2>
+            
+            {/* Description */}
+            <p className="text-primary-text/80 leading-relaxed mb-8 text-lg">{selectedProject.description}</p>
+            
+            {/* Tech/Tools Used */}
+            <div className="flex flex-wrap gap-3 mb-10">
+              {selectedProject.tools.map((tool: string, i: number) => (
+                <span key={i} className="px-4 py-2 rounded-full glass bg-white/30 text-sm font-medium text-primary-text/70 border border-white/20">
+                  {tool}
+                </span>
+              ))}
+            </div>
+
+            {/* Gallery */}
+            <div className="flex flex-col gap-8">
+              {selectedProject.images.map((img: string, i: number) => (
+                <div key={i} className="space-y-2">
+                  <img src={img} alt={`${selectedProject.title} ${i + 1}`} className="rounded-[24px] w-full h-auto object-cover shadow-lg border border-white/20" referrerPolicy="no-referrer" />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }
