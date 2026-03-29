@@ -386,7 +386,7 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
           <p className="text-primary-text/70 max-w-md">some of my best works</p>
         </div>
 
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-40">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -394,7 +394,7 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+              className="grid grid-cols-1 md:grid-cols-12 gap-20 items-center"
             >
               {/* Left Column: Image (60%) */}
               <div className={`md:col-span-7 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
@@ -443,7 +443,7 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
               {/* Right Column: Description (40%) */}
               <div className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <div className="glass-card rounded-[24px] p-8 md:p-10 backdrop-blur-md bg-white/40 border border-white/20 shadow-xl">
-                  <h3 className="text-4xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
+                  <h3 className="text-5xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
                     {project.title}
                   </h3>
                   <p className="text-primary-text/80 leading-relaxed mb-8">{project.description}</p>
