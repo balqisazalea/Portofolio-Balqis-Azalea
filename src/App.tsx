@@ -66,7 +66,7 @@ const Hero = () => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-lg sm:text-xl text-primary-text/70 leading-relaxed max-w-2xl mb-10 font-sans mx-auto">
+          <p className="text-lg sm:text-xl text-primary-text leading-relaxed max-w-2xl mb-10 font-sans mx-auto">
             Based in Indonesia
           </p>
 
@@ -97,8 +97,8 @@ const Hero = () => {
           >
             <div className="w-full h-full rounded-[2rem] overflow-hidden relative">
               <img 
-                src="https://github.com/user-attachments/assets/9fc60c2f-15db-4112-a2ac-a6b1e66886eb" 
-                alt="Abstract 3D Art" 
+                src="https://github.com/user-attachments/assets/4e8f91cf-8bcc-42ad-b98f-a13f5e25a6b0" 
+                alt="Im — Monster Character Design" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -112,8 +112,8 @@ const Hero = () => {
                     Featured Project
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-1">Neon Genesis</h3>
-                <p className="text-white/80 text-sm">3D Illustration & Branding</p>
+                <h3 className="text-2xl font-bold mb-1">Im — Monster Character Design</h3>
+                <p className="text-white/80 text-sm">Character Design</p>
               </div>
             </div>
           </motion.div>
@@ -126,8 +126,8 @@ const Hero = () => {
           >
             <div className="w-full h-full rounded-2xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2564&auto=format&fit=crop" 
-                alt="Graphic Design Elements" 
+                src="https://github.com/user-attachments/assets/cf016c4d-46fa-4423-b6e7-d388acbc3305" 
+                alt="Character Design Elements" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -211,7 +211,7 @@ const About = () => {
               </div>
               About Me
             </h3>
-            <div className="text-primary-text/80 text-lg leading-relaxed space-y-4 relative z-10">
+            <div className="text-primary-text text-lg leading-relaxed space-y-4 relative z-10">
               <p>
                 Balqis adalah mahasiswa Desain Grafis yang fokus pada ilustrasi dan desain visual.
                 Memiliki ketertarikan dalam mengolah ide menjadi karya visual yang komunikatif.
@@ -307,41 +307,6 @@ const About = () => {
 const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProject: any, setSelectedProject: (project: any) => void }) => {
   const projects = [
     {
-      id: 1,
-      title: "Keong Mas — Book Cover Redesign",
-      category: "Editorial Design",
-      description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual. Elemen ini digunakan sebagai simbol inti cerita sekaligus membangun daya tarik visual melalui pendekatan ilustratif yang memperkuat nuansa cerita rakyat.",
-      image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
-      images: [
-        "https://github.com/user-attachments/assets/8a9e7a14-dd54-4aa8-9d2a-3735b2dda44b",
-        "https://github.com/user-attachments/assets/264fe65c-3544-4bd1-b517-4010ad2ab308",
-        "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
-        "https://github.com/user-attachments/assets/0a4bbce9-65f4-4708-964b-1ca16a61f593",
-        "https://github.com/user-attachments/assets/31cf93db-7cdd-41d5-8ee2-5a81e87fb515"
-      ],
-      tools: ["Clip Studio Paint", "Photoshop"],
-      year: "2025",
-      tags: ["Editorial Design"]
-    },
-    {
-      id: 2,
-      title: "Cat T-Shirt Illustration",
-      category: "Apparel Design",
-      description: "Desain ilustrasi kaos dengan karakter Kucing yang dikembangkan melalui pendekatan stylized. Karakter dirancang dengan kepribadian aktif, girly, dan ceria, yang ditampilkan melalui ekspresi wajah, gesture, serta pemilihan warna yang kontras untuk memperkuat daya tarik visual pada media apparel.",
-      image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
-      images: [
-        "https://github.com/user-attachments/assets/b8b43c18-19c3-4b7d-83c8-838bc9a60360",
-        "https://github.com/user-attachments/assets/f6a5e894-4723-4a64-8172-36d40d1b1d3d",
-        "https://github.com/user-attachments/assets/5b7b4e77-c693-4a41-90f0-22c056f929ae",
-        "https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb",
-        "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61",
-        "https://github.com/user-attachments/assets/a3643bef-ff54-4e9b-a32f-eb2fd773ffa3"
-      ],
-      tools: ["Clip Studio Paint", "Photoshop"],
-      year: "2025",
-      tags: ["Apparel Design"]
-    },
-    {
       id: 3,
       title: "Im — Monster Character Design",
       category: "Character Design",
@@ -363,6 +328,24 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       tags: ["Character Design"]
     },
     {
+      id: 2,
+      title: "Cat T-Shirt Illustration",
+      category: "Apparel Design",
+      description: "Desain ilustrasi kaos dengan karakter Kucing yang dikembangkan melalui pendekatan stylized. Karakter dirancang dengan kepribadian aktif, girly, dan ceria, yang ditampilkan melalui ekspresi wajah, gesture, serta pemilihan warna yang kontras untuk memperkuat daya tarik visual pada media apparel.",
+      image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
+      images: [
+        "https://github.com/user-attachments/assets/b8b43c18-19c3-4b7d-83c8-838bc9a60360",
+        "https://github.com/user-attachments/assets/f6a5e894-4723-4a64-8172-36d40d1b1d3d",
+        "https://github.com/user-attachments/assets/5b7b4e77-c693-4a41-90f0-22c056f929ae",
+        "https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb",
+        "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61",
+        "https://github.com/user-attachments/assets/a3643bef-ff54-4e9b-a32f-eb2fd773ffa3"
+      ],
+      tools: ["Clip Studio Paint", "Photoshop"],
+      year: "2025",
+      tags: ["Apparel Design"]
+    },
+    {
       id: 4,
       title: "Tepiranu Coffee Rebranding",
       category: "Branding",
@@ -372,6 +355,23 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       tools: ["Illustrator", "Photoshop"],
       year: "2025",
       tags: ["Branding"]
+    },
+    {
+      id: 1,
+      title: "Keong Mas — Book Cover Redesign",
+      category: "Editorial Design",
+      description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual. Elemen ini digunakan sebagai simbol inti cerita sekaligus membangun daya tarik visual melalui pendekatan ilustratif yang memperkuat nuansa cerita rakyat.",
+      image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
+      images: [
+        "https://github.com/user-attachments/assets/8a9e7a14-dd54-4aa8-9d2a-3735b2dda44b",
+        "https://github.com/user-attachments/assets/264fe65c-3544-4bd1-b517-4010ad2ab308",
+        "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
+        "https://github.com/user-attachments/assets/0a4bbce9-65f4-4708-964b-1ca16a61f593",
+        "https://github.com/user-attachments/assets/31cf93db-7cdd-41d5-8ee2-5a81e87fb515"
+      ],
+      tools: ["Clip Studio Paint", "Photoshop"],
+      year: "2025",
+      tags: ["Editorial Design"]
     }
   ];
 
@@ -447,7 +447,7 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
                   <h3 className="text-5xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
                     {project.title}
                   </h3>
-                  <p className="text-primary-text/80 leading-relaxed mb-8">{project.description}</p>
+                  <p className="text-lg text-primary-text leading-relaxed mb-8">{project.description}</p>
                   
                   {/* Tech/Tools Used */}
                   <div className="flex flex-wrap gap-2 mb-8">
@@ -497,7 +497,7 @@ const Footer = () => {
           className="group relative flex items-center gap-3 px-8 py-4 bg-white/30 rounded-full shadow-sm border border-white/40 hover:shadow-md transition-all mb-12 backdrop-blur-2xl saturate-[180%]"
         >
           <Mail className="w-5 h-5 text-primary-text/40 group-hover:text-accent-primary transition-colors" />
-          <span className="text-lg font-medium text-primary-text/80">{email}</span>
+          <span className="text-lg font-medium text-primary-text">{email}</span>
           <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-accent-primary/10 transition-colors ml-2">
             {copied ? <Check className="w-4 h-4 text-accent-primary" /> : <Copy className="w-4 h-4 text-primary-text/40 group-hover:text-accent-primary" />}
           </div>
@@ -581,7 +581,7 @@ export default function App() {
             </h2>
             
             {/* Description */}
-            <p className="text-primary-text/80 leading-relaxed mb-8 text-lg">{selectedProject.description}</p>
+            <p className="text-primary-text leading-relaxed mb-8 text-lg">{selectedProject.description}</p>
             
             {/* Tech/Tools Used */}
             <div className="flex flex-wrap items-center gap-3 mb-10">
