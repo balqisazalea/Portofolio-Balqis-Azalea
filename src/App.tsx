@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Copy, Check, Dribbble, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush, X } from 'lucide-react';
+import { ArrowRight, Copy, Check, Linkedin, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush, X } from 'lucide-react';
 
 const Navbar = ({ selectedProject }: { selectedProject: any }) => {
   if (selectedProject) return null;
@@ -23,10 +23,6 @@ const Navbar = ({ selectedProject }: { selectedProject: any }) => {
         <a href="#work" className="hover:text-primary-text transition-colors">Project</a>
         <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
       </div>
-
-      <button className="bg-primary-text text-base px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-text/90 transition-all hover:shadow-lg hover:shadow-primary-text/10 active:scale-95 flex items-center gap-2">
-        Let's Talk <ArrowRight className="w-4 h-4" />
-      </button>
     </motion.nav>
   );
 };
@@ -348,7 +344,7 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       id: 3,
       title: "DEGAMON",
       category: "Illustration",
-      description: "Im adalah karakter monster berbasis Meerkat dengan pendekatan stylized, menggabungkan warna hijau dan elemen lightning sebagai representasi energi dan kewaspadaan. Desain ini menekankan karakter yang lincah, responsif, serta memiliki kekuatan listrik sebagai identitas visual utamanya.",
+      description: "Desain karakter monster (Degamon) berbasis Meerkat dengan eksplorasi warna hijau dan elemen lightning. Menggunakan pendekatan stylized untuk menampilkan karakter yang lincah, waspada, dan penuh energi.",
       image: "https://github.com/user-attachments/assets/4e8f91cf-8bcc-42ad-b98f-a13f5e25a6b0",
       images: [
         "https://github.com/user-attachments/assets/cf016c4d-46fa-4423-b6e7-d388acbc3305",
@@ -517,14 +513,14 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
-              <Dribbble className="w-5 h-5" />
+            <a href="https://www.linkedin.com/in/balqis-azalea-a327863b3/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
+              <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
+            <a href="https://www.instagram.com/balqisleaa/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
-              <Twitter className="w-5 h-5" />
+            <a href="mailto:balqiseka10@gmail.com" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
+              <Mail className="w-5 h-5" />
             </a>
           </div>
 
