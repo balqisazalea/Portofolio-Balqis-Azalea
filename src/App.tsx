@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Copy, Check, Linkedin, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush, X } from 'lucide-react';
+import { ArrowRight, Copy, Check, Linkedin, Instagram, Twitter, Mail, Sparkles, Palette, PenTool, Layout, Star, User, GraduationCap, Figma, Image, Layers, Video, Scissors, Brush, X, ExternalLink } from 'lucide-react';
 
 const Navbar = ({ selectedProject }: { selectedProject: any }) => {
   if (selectedProject) return null;
@@ -20,7 +20,7 @@ const Navbar = ({ selectedProject }: { selectedProject: any }) => {
       
       <div className="hidden md:flex items-center gap-8 font-medium text-sm text-primary-text/70">
         <a href="#about" className="hover:text-primary-text transition-colors">About</a>
-        <a href="#work" className="hover:text-primary-text transition-colors">Project</a>
+        <a href="#work" className="hover:text-primary-text transition-colors">works</a>
         <a href="#contact" className="hover:text-primary-text transition-colors">Contact</a>
       </div>
     </motion.nav>
@@ -60,14 +60,14 @@ const Hero = () => {
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight text-primary-text leading-[1.1] mb-6 drop-shadow-sm">
             Hi, I'm Balqis.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-primary-text text-[12vw] leading-[0.8] block w-full text-center">
-              PORTFOLIO
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-primary-text text-[6vw] leading-[1.1] block w-full text-center mt-2">
+              Illustrator & Graphic Designer
             </span>
           </h1>
 
           {/* Sub-headline */}
           <p className="text-lg sm:text-xl text-primary-text/70 leading-relaxed max-w-2xl mb-10 font-sans mx-auto">
-            Illustrator & Graphic Design
+            Based in Indonesia
           </p>
 
           {/* CTA Button */}
@@ -308,9 +308,9 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
   const projects = [
     {
       id: 1,
-      title: "Cover Buku Keong Mas",
-      category: "Illustration",
-      description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual, sebagai simbol inti cerita dan daya tarik utama komposisi.",
+      title: "Keong Mas — Book Cover Redesign",
+      category: "Editorial Design",
+      description: "Redesain cover buku cerita rakyat Keong Mas dengan menempatkan keong emas sebagai fokus utama visual. Elemen ini digunakan sebagai simbol inti cerita sekaligus membangun daya tarik visual melalui pendekatan ilustratif yang memperkuat nuansa cerita rakyat.",
       image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
       images: [
         "https://github.com/user-attachments/assets/8a9e7a14-dd54-4aa8-9d2a-3735b2dda44b",
@@ -321,12 +321,12 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       ],
       tools: ["Clip Studio Paint", "Photoshop"],
       year: "2025",
-      tags: ["Illustration", "Design"]
+      tags: ["Editorial Design"]
     },
     {
       id: 2,
-      title: "Ilustrasi Kaos",
-      category: "Illustration",
+      title: "Cat T-Shirt Illustration",
+      category: "Apparel Design",
       description: "Desain ilustrasi kaos dengan karakter Kucing yang dikembangkan melalui pendekatan stylized. Karakter dirancang dengan kepribadian aktif, girly, dan ceria, yang ditampilkan melalui ekspresi wajah, gesture, serta pemilihan warna yang kontras untuk memperkuat daya tarik visual pada media apparel.",
       image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
       images: [
@@ -338,12 +338,12 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       ],
       tools: ["Clip Studio Paint", "Photoshop"],
       year: "2025",
-      tags: ["Illustration", "Design"]
+      tags: ["Apparel Design"]
     },
     {
       id: 3,
-      title: "DEGAMON",
-      category: "Illustration",
+      title: "Im — Monster Character Design",
+      category: "Character Design",
       description: "Desain karakter monster (Degamon) berbasis Meerkat dengan eksplorasi warna hijau dan elemen lightning. Menggunakan pendekatan stylized untuk menampilkan karakter yang lincah, waspada, dan penuh energi.",
       image: "https://github.com/user-attachments/assets/4e8f91cf-8bcc-42ad-b98f-a13f5e25a6b0",
       images: [
@@ -359,18 +359,18 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       ],
       tools: ["Ibis Paint", "Adobe Illustrator"],
       year: "2024",
-      tags: ["Illustration", "Design"]
+      tags: ["Character Design"]
     },
     {
       id: 4,
-      title: "Rebranding Tepiranu Coffee",
-      category: "Rebranding",
+      title: "Tepiranu Coffee Rebranding",
+      category: "Branding",
       description: "Proyek berbasis tim berupa perancangan rebranding untuk sebuah public space bernama Tepiranu Coffee. Perancangan meliputi pengembangan logo, Graphic Standard Manual (GSM), identitas visual, desain signage, serta media promosi digital untuk membangun identitas yang konsisten dan mudah dikenali.",
       image: "https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8",
       images: ["https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8"],
       tools: ["Illustrator", "Photoshop"],
       year: "2025",
-      tags: ["Graphic Design"]
+      tags: ["Branding"]
     }
   ];
 
@@ -382,8 +382,8 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="mb-20">
-          <h2 className="text-6xl font-serif font-bold text-primary-text mb-4">Project</h2>
-          <p className="text-primary-text/70 max-w-md">beberapa proyek terbaik saya</p>
+          <h2 className="text-6xl font-serif font-bold text-primary-text mb-4">works</h2>
+          <p className="text-primary-text/70 max-w-md">some of my best works</p>
         </div>
 
         <div className="flex flex-col gap-24">
@@ -519,9 +519,6 @@ const Footer = () => {
             <a href="https://www.instagram.com/balqisleaa/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="mailto:balqiseka10@gmail.com" className="w-10 h-10 rounded-full glass flex items-center justify-center text-primary-text/60 hover:text-accent-primary hover:bg-white transition-all">
-              <Mail className="w-5 h-5" />
-            </a>
           </div>
 
           <p className="text-sm text-primary-text/50">
@@ -586,12 +583,22 @@ export default function App() {
             <p className="text-primary-text/80 leading-relaxed mb-8 text-lg">{selectedProject.description}</p>
             
             {/* Tech/Tools Used */}
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap items-center gap-3 mb-10">
               {selectedProject.tools.map((tool: string, i: number) => (
                 <span key={i} className="px-4 py-2 rounded-full glass bg-white/30 text-sm font-medium text-primary-text/70 border border-white/20">
                   {tool}
                 </span>
               ))}
+              {selectedProject.id === 4 && (
+                <a 
+                  href="https://drive.google.com/file/d/1shLILVtg2NF-BQZzhRvKVFFBCoarGu1o/view?usp=sharing" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-accent-primary text-primary-text rounded-full text-sm font-bold hover:bg-accent-primary/90 transition-all shadow-lg shadow-accent-primary/10 active:scale-95 flex items-center gap-2 ml-auto"
+                >
+                  Klik GSM <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
             </div>
 
             {/* Gallery */}
