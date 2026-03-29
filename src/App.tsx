@@ -334,7 +334,8 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
         "https://github.com/user-attachments/assets/f6a5e894-4723-4a64-8172-36d40d1b1d3d",
         "https://github.com/user-attachments/assets/5b7b4e77-c693-4a41-90f0-22c056f929ae",
         "https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb",
-        "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61"
+        "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61",
+        "https://github.com/user-attachments/assets/a3643bef-ff54-4e9b-a32f-eb2fd773ffa3"
       ],
       tools: ["Clip Studio Paint", "Photoshop"],
       year: "2025",
