@@ -318,11 +318,14 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       image: "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
       images: [
         "https://github.com/user-attachments/assets/8a9e7a14-dd54-4aa8-9d2a-3735b2dda44b",
+        "https://github.com/user-attachments/assets/264fe65c-3544-4bd1-b517-4010ad2ab308",
         "https://github.com/user-attachments/assets/2f091461-b382-4b35-a344-2464ff991299",
         "https://github.com/user-attachments/assets/0a4bbce9-65f4-4708-964b-1ca16a61f593",
         "https://github.com/user-attachments/assets/31cf93db-7cdd-41d5-8ee2-5a81e87fb515"
       ],
-      tools: ["Clip Studio Paint"]
+      tools: ["Clip Studio Paint", "Photoshop"],
+      year: "2025",
+      tags: ["Illustration", "Design"]
     },
     {
       id: 2,
@@ -331,12 +334,15 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       description: "Desain ilustrasi kaos dengan karakter Kucing yang dikembangkan melalui pendekatan stylized. Karakter dirancang dengan kepribadian aktif, girly, dan ceria, yang ditampilkan melalui ekspresi wajah, gesture, serta pemilihan warna yang kontras untuk memperkuat daya tarik visual pada media apparel.",
       image: "https://github.com/user-attachments/assets/a5e62d7c-46f8-4367-8f0a-fb3a60ebd28e",
       images: [
+        "https://github.com/user-attachments/assets/b8b43c18-19c3-4b7d-83c8-838bc9a60360",
         "https://github.com/user-attachments/assets/f6a5e894-4723-4a64-8172-36d40d1b1d3d",
         "https://github.com/user-attachments/assets/5b7b4e77-c693-4a41-90f0-22c056f929ae",
         "https://github.com/user-attachments/assets/e0fffd1a-5808-417b-bb63-b62fc69daeeb",
         "https://github.com/user-attachments/assets/ed37277e-8403-42f1-8a09-f43d63572f61"
       ],
-      tools: ["Clip Studio Paint", "Photoshop"]
+      tools: ["Clip Studio Paint", "Photoshop"],
+      year: "2025",
+      tags: ["Illustration", "Design"]
     },
     {
       id: 3,
@@ -355,7 +361,9 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
         "https://github.com/user-attachments/assets/b74c5ea8-e478-485a-93bc-6f598f2c72d3",
         "https://github.com/user-attachments/assets/bf6be5a8-1a3f-4c79-8701-9ecc9accc409"
       ],
-      tools: ["Ibis Paint", "Adobe Illustrator"]
+      tools: ["Ibis Paint", "Adobe Illustrator"],
+      year: "2024",
+      tags: ["Illustration", "Design"]
     },
     {
       id: 4,
@@ -364,7 +372,9 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
       description: "Proyek berbasis tim berupa perancangan rebranding untuk sebuah public space bernama Tepiranu Coffee. Perancangan meliputi pengembangan logo, Graphic Standard Manual (GSM), identitas visual, desain signage, serta media promosi digital untuk membangun identitas yang konsisten dan mudah dikenali.",
       image: "https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8",
       images: ["https://github.com/user-attachments/assets/5e8d26b4-7f49-46d7-a1c4-64ee2a93cee8"],
-      tools: ["Illustrator", "Photoshop"]
+      tools: ["Illustrator", "Photoshop"],
+      year: "2025",
+      tags: ["Graphic Design"]
     }
   ];
 
@@ -437,7 +447,6 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
               {/* Right Column: Description (40%) */}
               <div className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <div className="glass-card rounded-[24px] p-8 md:p-10 backdrop-blur-md bg-white/40 border border-white/20 shadow-xl">
-                  <span className="text-xs font-bold uppercase tracking-wider text-accent-primary mb-3 block">{project.category}</span>
                   <h3 className="text-4xl font-serif font-bold text-primary-text mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text">
                     {project.title}
                   </h3>
@@ -445,8 +454,9 @@ const ProjectsSection = ({ selectedProject, setSelectedProject }: { selectedProj
                   
                   {/* Tech/Tools Used */}
                   <div className="flex flex-wrap gap-2 mb-8">
-                    <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Illustration</span>
-                    <span className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">Design</span>
+                    {project.tags?.map((tag: string, i: number) => (
+                      <span key={i} className="px-3 py-1 rounded-full glass text-xs font-medium text-primary-text/70 border border-white/20">{tag}</span>
+                    ))}
                   </div>
 
                   <button 
@@ -567,6 +577,11 @@ export default function App() {
             </button>
 
             {/* Header */}
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary-text/60">{selectedProject.category}</span>
+              <span className="w-1 h-1 rounded-full bg-primary-text/20"></span>
+              <span className="text-xs font-bold text-primary-text/40">{selectedProject.year}</span>
+            </div>
             <h2 className="text-5xl font-serif font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-primary-text mb-6">
               {selectedProject.title}
             </h2>
